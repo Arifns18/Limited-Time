@@ -1,11 +1,18 @@
 <script setup></script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
+  <div>
+    <nav>
+      <RouterLink to="/">Home</RouterLink> | 
+      <RouterLink to="/admin">Admin</RouterLink> | 
+      <RouterLink to="/user">User</RouterLink>
+    </nav>
+
+    <RouterView/>
+  </div>
 </template>
+
+
 
 <style scoped></style>
